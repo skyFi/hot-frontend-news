@@ -7,7 +7,7 @@
   "scripts": {
     "test": "ava",
     "dev": "nuxt",
-    "build": "nuxt build",
+    "build": "nuxt build; tar -czf public.tar.gz public",
     "start": "nuxt start",
     "analyze": "nuxt build --analyze",
     "generate": "nuxt generate",
