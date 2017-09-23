@@ -18,5 +18,5 @@ deploy:
     ref: origin/master
     repo: git@github.com:skyFi/hot-frontend-news.git
     path: /root/workspace/hot-frontend-news/
-    pre-deploy-local: set -o errexit; set -o xtrace; git checkout master; git pull; cnpm install || npm install; npm run build; scp dist.tar.gz smartstudy@139.224.133.145:/root/workspace/hot-frontend-news/source"
+    pre-deploy-local: set -o errexit; set -o xtrace; git checkout master; git pull; cnpm install || npm install; npm run build; scp dist.tar.gz root@139.224.133.145:/root/workspace/hot-frontend-news/source"
     post-deploy: set -o errexit; tar -xzf dist.tar.gz; rm dist.tar.gz; cnpm install; pm2 startOrReload ecosystem.yaml --update-env --env production
