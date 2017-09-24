@@ -12,6 +12,7 @@
     "analyze": "nuxt build --analyze",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "deploy-production": "pm2 deploy ecosystem.yaml production update",
     "precommit": "npm run lint"
   },
   "ava": {
